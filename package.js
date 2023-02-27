@@ -18,7 +18,6 @@ Package.onTest(function(api) {
 });
 
 function configurePackage(api) {
-  api.versionsFrom('METEOR@1');
   api.use(['mongo'], ['server']);
 
   // common before
