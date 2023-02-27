@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Proper MongoDB aggregations support for Meteor',
-  version: '1.4.4',
+  version: '1.5.0',
   git: 'https://github.com/sakulstra/meteor-aggregate',
   name: 'sakulstra:aggregate'
 });

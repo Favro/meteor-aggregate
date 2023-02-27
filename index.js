@@ -20,3 +20,12 @@ Mongo.Collection.prototype.aggregate = function(pipelines, options) {
 
   return wrapAsync(coll.aggregate.bind(coll))(pipelines, options);
 };
+
+Mongo.Collection.prototype.aggregateAsync = function(pipelines, options) {
+	const coll = this.rawCollection();
+	if (!coll) {
+		throw new Meteor.Error("No rawCollection found. Is your meteor version outdated?");
+	}
+
+	return coll.aggregate(pipelines, options).toArray();
+};
